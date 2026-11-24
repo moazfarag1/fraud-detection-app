@@ -48,11 +48,11 @@ Priority if time runs short: (1) correct model + working app on GitHub, (2) six 
 - Gate: notebook executes, JSON written, numbers sensible
 
 ## Phase 7: App + Notebook 05 - Deployment (Ali Mahmoud)
-- [ ] app.py: Check, Batch, Dashboard, About tabs; 6 presets
-- [ ] Tests: features unit tests, AppTest smoke test
-- [ ] Screenshots of every tab (Playwright)
-- [ ] Notebook 05
-- [ ] tools/run_notebooks.py runs all 6 notebooks
+- [x] app.py: Check, Batch, Dashboard, About tabs; 6 presets
+- [x] Tests: features unit tests, AppTest smoke test
+- [x] Screenshots of every tab (Playwright)
+- [x] Notebook 05
+- [x] tools/run_notebooks.py runs all 6 notebooks
 - Gate: pytest passes, app starts, screenshots inspected, all notebooks execute
 
 ## Phase 8: Deliverables

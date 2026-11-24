@@ -1,0 +1,10 @@
+{
+  "notebook": "05_deployment",
+  "findings": [
+    "The app is one Streamlit file (app.py) that reuses src/, reads only repository files and makes no network calls.",
+    "Presets: normal payment Low risk, normal small transfer Approve, night transfer to a new receiver Block, cash-out after receiving Block.",
+    "Two presets show known limitations honestly: the busy mule account (Approve) and the split fraud (Approve).",
+    "Batch check on data/sample.csv (11,999 rows): 92.3% of the labeled fraud rows go to Review or Block, with 8 normal rows flagged.",
+    "28 passed; deployment uses requirements.txt (runtime only, exact versions) on Python 3.11."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "presets": [
+    {
+      "key": "normal_payment",
+      "example": "Normal payment",
+      "type": "PAYMENT",
+      "amount": 2500.0,
+      "hour": 14,
+      "receiver": "Some history",
+      "verdict": "Low risk",
+      "risk_points": null,
+      "warning_signs": []
+    },
+    {
+      "key": "small_transfer",
+      "example": "Normal small transfer",
+      "type": "TRANSFER",
+      "amount": 15000.0,
+      "hour": 11,
+      "receiver": "Some history",
+      "verdict": "Approve",
+      "risk_points": 0.0,
+      "warning_signs": []
+    },
+    {
+      "key": "night_new_receiver",
+      "example": "Large transfer to a brand-new receiver at night",
+      "type": "TRANSFER",
+      "amount": 2400000.0,
+      "hour": 3,
+      "receiver": "New account (no history)",
+      "verdict": "Block",
+      "risk_points": 96.6,
+      "warning_signs": [
+        "Money goes to a brand-new receiver account (no earlier incoming transfers).",
+        "Very large amount (1,000,000 or more).",
+        "Unusual hour (night, 00:00 to 05:59).",
+        "The transaction empties the whole balance of the sender.",
+        "Receiver account shows a zero balance before the transfer."
+      ]
+    },
+    {
+      "key": "cash_out_after_receiving",
+      "example": "Cash-out right after receiving",
+      "type": "CASH_OUT",
+      "amount": 2400000.0,
+      "hour": 4,
+      "receiver": "Some history",
+      "verdict": "Block",
+      "risk_points": 96.6,
+      "warning_signs": [
+        "Very large amount (1,000,000 or more).",
+        "Unusual hour (night, 00:00 to 05:59).",
+        "The transaction empties the whole balance of the sender."
+      ]
+    },
+    {
+      "key": "mule_many_transfers",
+      "example": "Mule account receiving many transfers",
+      "type": "TRANSFER",
+      "amount": 300000.0,
+      "hour": 22,
+      "receiver": "Very active recently",
+      "verdict": "Approve",
+      "risk_points": 0.1,
+      "warning_signs": [
+        "Receiver got many transfers before (possible collection or mule account).",
+        "Receiver got another transfer in the last few hours.",
+        "The transaction empties the whole balance of the sender."
+      ]
+    },
+    {
+      "key": "split_fraud",
+      "example": "Split fraud with smaller amounts",
+      "type": "TRANSFER",
+      "amount": 450000.0,
+      "hour": 2,
+      "receiver": "Some history",
+      "verdict": "Approve",
+      "risk_points": 0.1,
+      "warning_signs": [
+        "Unusual hour (night, 00:00 to 05:59)."
+      ]
+    }
+  ],
+  "sample_batch": {
+    "rows": 11999,
+    "counts": {
+      "Approve": 5101,
+      "Review": 24,
+      "Block": 261,
+      "Low risk": 6613
+    },
+    "labeled_fraud_flagged_pct": 92.33333333333333,
+    "normal_flagged": 8
+  }
+}
