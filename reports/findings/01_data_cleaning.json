@@ -1,0 +1,11 @@
+{
+  "notebook": "01_data_cleaning",
+  "findings": [
+    "The PaySim file has 6,362,620 transactions over 743 simulated hours (about 31 days).",
+    "Data quality is high: no missing values, 0 duplicated rows and no negative amounts or balances.",
+    "Only 8,213 rows are fraud (0.13% of all transactions).",
+    "Fraud appears only in CASH_OUT and TRANSFER; PAYMENT, DEBIT and CASH_IN have zero fraud, so we model only these two types.",
+    "16 zero-amount rows exist (16 of them fraud); we keep them.",
+    "Saved clean.parquet (299 MB) and a 11,999-row sample.csv (0.97 MB) for the app."
+  ]
+}

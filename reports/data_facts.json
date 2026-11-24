@@ -1,0 +1,56 @@
+{
+  "rows_total": 6362620,
+  "rows_transfer_cashout": 2770409,
+  "fraud_total": 8213,
+  "fraud_rate_pct": 0.1291,
+  "fraud_rate_scored_pct": 0.2965,
+  "fraud_by_type": {
+    "CASH_IN": 0,
+    "CASH_OUT": 4116,
+    "DEBIT": 0,
+    "PAYMENT": 0,
+    "TRANSFER": 4097
+  },
+  "fraud_rate_by_type_pct": {
+    "CASH_IN": 0.0,
+    "CASH_OUT": 0.184,
+    "DEBIT": 0.0,
+    "PAYMENT": 0.0,
+    "TRANSFER": 0.7688
+  },
+  "steps": 743,
+  "max_fraud_amount": 10000000.0,
+  "fraud_rows_at_max_amount": 287,
+  "median_amount_fraud": 441423.44,
+  "median_amount_normal_scored": 171034.46000000002,
+  "night_share_fraud_pct": 24.3,
+  "night_share_normal_pct": 0.94,
+  "fraud_rate_night_pct": 7.112,
+  "fraud_rate_day_pct": 0.227,
+  "fraud_rate_steps_1_400_pct": 0.177,
+  "fraud_rate_steps_401_743_pct": 1.551,
+  "flagged_rows": 16,
+  "flagged_true_fraud": 16,
+  "flagged_recall_pct": 0.195,
+  "unique_senders": 6353307,
+  "unique_receivers": 2722362,
+  "fraud_chain_links_found": 0,
+  "balance_checks_pct": {
+    "Sender balances do not add up": {
+      "normal": 90.51,
+      "fraud": 0.55
+    },
+    "Receiver balances do not add up": {
+      "normal": 22.58,
+      "fraud": 56.5
+    },
+    "Amount equals the whole sender balance": {
+      "normal": 0.0,
+      "fraud": 97.82
+    },
+    "Receiver balance 0 before and after": {
+      "normal": 0.06,
+      "fraud": 49.56
+    }
+  }
+}

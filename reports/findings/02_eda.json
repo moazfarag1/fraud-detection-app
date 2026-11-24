@@ -1,0 +1,11 @@
+{
+  "notebook": "02_eda",
+  "findings": [
+    "Fraud is very rare: 0.13% of all transactions (about 1 in 775), and 0.30% within TRANSFER and CASH_OUT.",
+    "Fraud amounts are larger: the median fraud is 2.6x the median normal transfer, and 287 frauds sit exactly at the 10,000,000 cap.",
+    "Fraud does not sleep: 24% of fraud happens between 00:00 and 05:59 versus 1% of normal traffic, so the night-time fraud rate is 7.1% versus 0.23% by day.",
+    "Normal traffic thins out late in the month, so the fraud rate rises from 0.18% (steps 1-400) to 1.55% (steps 401-743).",
+    "The simulator rule isFlaggedFraud flags only 16 rows and catches 0.20% of fraud.",
+    "Balance columns separate the classes too cleanly to trust: 98% of frauds move exactly the whole sender balance (normal: 0.0%), sender balances fail to add up for 91% of normal rows but only 0.6% of frauds, and the receiver balance stays 0 for 50% of frauds."
+  ]
+}

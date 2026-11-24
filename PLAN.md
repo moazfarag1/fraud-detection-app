@@ -12,17 +12,17 @@ Priority if time runs short: (1) correct model + working app on GitHub, (2) six 
 - Gate: imports succeed, versions printed, git status clean of data files
 
 ## Phase 2: Notebook 01 - Data Collection & Cleaning (Moaz Farag)
-- [ ] Load CSV once with compact dtypes, cache to data/processed/clean.parquet
-- [ ] Quality checks: types, missing, duplicates, amounts, categories
-- [ ] Verify fraud only in TRANSFER and CASH_OUT
-- [ ] Stratified sample to data/sample.csv (<= 2 MB)
+- [x] Load CSV once with compact dtypes, cache to data/processed/clean.parquet
+- [x] Quality checks: types, missing, duplicates, amounts, categories
+- [x] Verify fraud only in TRANSFER and CASH_OUT
+- [x] Stratified sample to data/sample.csv (<= 2 MB)
 - Gate: notebook executes, outputs saved
 
 ## Phase 3: Notebook 02 - EDA (Mohamed Mohy)
-- [ ] Fraud rate overall and per type, amounts, hour, step
-- [ ] isFlaggedFraud coverage, ID repetition, merchant prefix
-- [ ] Balance-column artifact measured
-- [ ] reports/data_facts.json
+- [x] Fraud rate overall and per type, amounts, hour, step
+- [x] isFlaggedFraud coverage, ID repetition, merchant prefix
+- [x] Balance-column artifact measured
+- [x] reports/data_facts.json
 - Gate: notebook executes, data_facts.json written
 
 ## Phase 4: Notebook 03 - Feature Engineering & Threat Model (Mohamed Rafat)
