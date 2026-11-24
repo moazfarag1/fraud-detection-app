@@ -41,3 +41,15 @@ Each entry: what was decided, and why.
     split is reported as a secondary check and gives the same ranking of models.
 14. **Evasion test** uses 100 random test-period frauds that the model catches; "split the amount" counts
     as a success only when every piece is approved.
+15. **Slide 10 team table uses 13 pt text** (the brief asks for body text of at least 18 pt). Six long role
+    names do not fit in a table at 18 pt; all other body text is 18 pt or larger.
+16. **The cited fact on slide 2** is the US Federal Trade Commission's March 2025 report of 12.5 billion US
+    dollars lost to fraud in 2024. It is listed in the report references.
+17. **LibreOffice is not installed**, so slides were rendered to PNG through the installed Microsoft PowerPoint
+    (COM export) for visual inspection, plus a programmatic bounds check.
+18. **Fonts**: Noto Sans (English) and Cairo (Arabic), both under the SIL Open Font License, downloaded once
+    into assets/fonts and embedded with @font-face; nothing is loaded from a CDN at render time.
+19. **Arabic report**: team names, roles, file names and technical terms stay in Latin script (as in
+    config/project.json); numbers use Western digits.
+20. **Notebook headers and findings** are filled by tools/stamp_notebooks.py from config/project.json and
+    reports/findings/*.json, so `build_deliverables.py` updates them without re-executing anything.

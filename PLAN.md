@@ -56,12 +56,12 @@ Priority if time runs short: (1) correct model + working app on GitHub, (2) six 
 - Gate: pytest passes, app starts, screenshots inspected, all notebooks execute
 
 ## Phase 8: Deliverables
-- [ ] slides/Fraud_Detector.pptx
-- [ ] reports/Report_EN.pdf
-- [ ] reports/Report_AR.pdf
-- [ ] reports/Demo_Script.md
-- [ ] README.md
-- [ ] check_consistency.py passes
+- [x] slides/Fraud_Detector.pptx
+- [x] reports/Report_EN.pdf
+- [x] reports/Report_AR.pdf
+- [x] reports/Demo_Script.md
+- [x] README.md
+- [x] check_consistency.py passes
 - Gate: consistency check passes, page images inspected
 
 ## Phase 9: Git and deployment prep

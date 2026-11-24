@@ -1,0 +1,14 @@
+{
+  "new_receiver_share_fraud_pct": 63.265554608547426,
+  "new_receiver_share_normal_pct": 15.112975328325723,
+  "fraud_rate_new_receiver_pct": 1.2293976519356624,
+  "fraud_rate_known_receiver_pct": 0.12850530483698738,
+  "new_receiver_lift": 9.56690195393247,
+  "leakage_check_rows": 1511368,
+  "leakage_check_hours": 150,
+  "n_features": {
+    "R": 10,
+    "P": 13,
+    "L": 17
+  }
+}
