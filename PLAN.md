@@ -65,10 +65,10 @@ Priority if time runs short: (1) correct model + working app on GitHub, (2) six 
 - Gate: consistency check passes, page images inspected
 
 ## Phase 9: Git and deployment prep
-- [ ] Size / secrets audit
-- [ ] Private GitHub repo created and pushed
-- [ ] Clean-install test with only requirements.txt
-- [ ] Streamlit Cloud checklist
+- [x] Size / secrets audit
+- [x] Private GitHub repo created and pushed
+- [x] Clean-install test with only requirements.txt
+- [x] Streamlit Cloud checklist
 
 ## Phase 10: Final self-review
-- [ ] Names, roles, typos, no emojis, consistent numbers, presets behave as described
+- [x] Names, roles, typos, no emojis, consistent numbers, presets behave as described
