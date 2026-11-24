@@ -1,0 +1,18 @@
+{
+  "project_name": "Financial Transaction Fraud Detector",
+  "short_name": "Fraud Detector",
+  "course": "AI in Cybersecurity",
+  "university": "Sohag University",
+  "faculty": "Faculty of Computers and Artificial Intelligence",
+  "department": "Computer Science (AI & Data Science track)",
+  "date": "2026-11-24",
+  "app_url": "",
+  "team": [
+    {"name": "Moaz Farag", "role": "Data Collection & Cleaning, project coordination", "notebook": "notebooks/01_data_cleaning.ipynb", "slides": [1, 2, 4]},
+    {"name": "Mohamed Mohy", "role": "Exploratory Data Analysis (EDA)", "notebook": "notebooks/02_eda.ipynb", "slides": [5]},
+    {"name": "Mohamed Rafat", "role": "Feature Engineering & Threat Model", "notebook": "notebooks/03_feature_engineering.ipynb", "slides": [3, 6]},
+    {"name": "Mahmoud Ibrahim", "role": "Model Training (models R/P/L, baselines, thresholds)", "notebook": "notebooks/04a_model_training.ipynb", "slides": [7]},
+    {"name": "Mohamed Mahmoud", "role": "Model Evaluation & Evasion Testing", "notebook": "notebooks/04b_evaluation_and_evasion.ipynb", "slides": [8]},
+    {"name": "Ali Mahmoud", "role": "Deployment & Web Application", "notebook": "notebooks/05_deployment.ipynb", "slides": [9, 10]}
+  ]
+}

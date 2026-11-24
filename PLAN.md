@@ -1,0 +1,74 @@
+# Project Plan: Financial Transaction Fraud Detector
+
+Priority if time runs short: (1) correct model + working app on GitHub, (2) six notebooks executed,
+(3) slides, (4) English PDF report, (5) Arabic PDF report, (6) demo script.
+
+## Phase 1: Setup
+- [x] Folder structure, .gitignore, raw CSV moved to data/raw/ (ignored)
+- [x] Python 3.11 venv, requirements.txt (runtime, pinned) and requirements-dev.txt
+- [x] Jupyter kernel registered
+- [x] config/project.json with team and roles
+- [x] git init, first commit (no CSV/parquet staged)
+- Gate: imports succeed, versions printed, git status clean of data files
+
+## Phase 2: Notebook 01 - Data Collection & Cleaning (Moaz Farag)
+- [ ] Load CSV once with compact dtypes, cache to data/processed/clean.parquet
+- [ ] Quality checks: types, missing, duplicates, amounts, categories
+- [ ] Verify fraud only in TRANSFER and CASH_OUT
+- [ ] Stratified sample to data/sample.csv (<= 2 MB)
+- Gate: notebook executes, outputs saved
+
+## Phase 3: Notebook 02 - EDA (Mohamed Mohy)
+- [ ] Fraud rate overall and per type, amounts, hour, step
+- [ ] isFlaggedFraud coverage, ID repetition, merchant prefix
+- [ ] Balance-column artifact measured
+- [ ] reports/data_facts.json
+- Gate: notebook executes, data_facts.json written
+
+## Phase 4: Notebook 03 - Feature Engineering & Threat Model (Mohamed Rafat)
+- [ ] Threat model
+- [ ] src/features.py: basic, receiver history (strictly earlier steps), pre-balance, post-balance
+- [ ] Leakage worked example
+- [ ] data/processed/features.parquet
+- Gate: notebook executes, leakage example shown, features saved
+
+## Phase 5: Notebook 04a - Model Training (Mahmoud Ibrahim)
+- [ ] Time-based split, fraud rate per split
+- [ ] Models R, P, L (HistGradientBoosting) + Logistic Regression baseline + isFlaggedFraud rule
+- [ ] Thresholds on validation (recall >= 0.85 at Review or Block)
+- [ ] models/model.joblib, models/model_meta.json, reports/validation.json
+- Gate: notebook executes, model reloads in a fresh process
+
+## Phase 6: Notebook 04b - Evaluation & Evasion (Mohamed Mahmoud)
+- [ ] Test metrics for all models and baselines, accuracy trap
+- [ ] Permutation importance
+- [ ] Warning signs (src/explain.py)
+- [ ] Evasion test (4 tricks)
+- [ ] reports/metrics.json, feature_importance.json, evasion.json
+- Gate: notebook executes, JSON written, numbers sensible
+
+## Phase 7: App + Notebook 05 - Deployment (Ali Mahmoud)
+- [ ] app.py: Check, Batch, Dashboard, About tabs; 6 presets
+- [ ] Tests: features unit tests, AppTest smoke test
+- [ ] Screenshots of every tab (Playwright)
+- [ ] Notebook 05
+- [ ] tools/run_notebooks.py runs all 6 notebooks
+- Gate: pytest passes, app starts, screenshots inspected, all notebooks execute
+
+## Phase 8: Deliverables
+- [ ] slides/Fraud_Detector.pptx
+- [ ] reports/Report_EN.pdf
+- [ ] reports/Report_AR.pdf
+- [ ] reports/Demo_Script.md
+- [ ] README.md
+- [ ] check_consistency.py passes
+- Gate: consistency check passes, page images inspected
+
+## Phase 9: Git and deployment prep
+- [ ] Size / secrets audit
+- [ ] Private GitHub repo created and pushed
+- [ ] Clean-install test with only requirements.txt
+- [ ] Streamlit Cloud checklist
+
+## Phase 10: Final self-review
+- [ ] Names, roles, typos, no emojis, consistent numbers, presets behave as described

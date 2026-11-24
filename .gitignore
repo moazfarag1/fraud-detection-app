@@ -1,0 +1,28 @@
+# data (never commit raw or processed data)
+data/raw/
+data/processed/
+*.parquet
+*.csv
+!data/sample.csv
+
+# python / env
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# secrets
+kaggle.json
+.env
+.streamlit/secrets.toml
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# temp
+tmp/
