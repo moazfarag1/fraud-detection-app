@@ -1,0 +1,11 @@
+{
+  "notebook": "03_feature_engineering",
+  "findings": [
+    "Threat model: account takeover, then a TRANSFER to a mule account, then a CASH_OUT; the bank can watch the receiving account even when it cannot see the attacker.",
+    "We built 17 features in four groups: basic (6), receiver history (4), pre-transaction balances (3) and post-transaction balances (4).",
+    "Receiver history uses only strictly earlier hours; recomputing it without future rows gave identical values for all 1,511,368 rows of the first 150 hours.",
+    "63% of frauds go to a brand-new receiver versus 15% of normal transfers; transactions to new receivers are 9.6x more likely to be fraud.",
+    "IDs, isFraud and isFlaggedFraud are never model inputs; the calendar day is not used either, because the time-based split would turn it into a shortcut.",
+    "Saved 2,770,409 TRANSFER and CASH_OUT rows to features.parquet."
+  ]
+}

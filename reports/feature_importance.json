@@ -1,0 +1,84 @@
+{
+  "model": "P",
+  "scoring": "average_precision",
+  "features": [
+    {
+      "feature": "amount_to_balance",
+      "label": "Amount / sender balance",
+      "importance": 0.8565940523663029,
+      "std": 0.004048634734293483
+    },
+    {
+      "feature": "amount",
+      "label": "Amount",
+      "importance": 0.03089226882901739,
+      "std": 0.003240083226660566
+    },
+    {
+      "feature": "oldbalanceDest",
+      "label": "Receiver balance before",
+      "importance": 0.014114620164605584,
+      "std": 0.0004249766488416654
+    },
+    {
+      "feature": "is_transfer",
+      "label": "Type is TRANSFER (vs CASH_OUT)",
+      "importance": 0.009128203073943908,
+      "std": 0.0006522426788844154
+    },
+    {
+      "feature": "recv_count_before",
+      "label": "Receiver: transfers received before",
+      "importance": 0.006047931516298832,
+      "std": 6.098352694149665e-05
+    },
+    {
+      "feature": "oldbalanceOrg",
+      "label": "Sender balance before",
+      "importance": 0.004171056672413687,
+      "std": 0.0003263368556431661
+    },
+    {
+      "feature": "hour",
+      "label": "Hour of day",
+      "importance": 0.001666245596796978,
+      "std": 0.00019380874311027737
+    },
+    {
+      "feature": "recv_is_new",
+      "label": "Receiver is a new account",
+      "importance": 0.0004900943142684078,
+      "std": 3.249626846646398e-05
+    },
+    {
+      "feature": "recv_hours_since_last",
+      "label": "Receiver: hours since last incoming",
+      "importance": 0.0003091325235255349,
+      "std": 7.230660969594818e-05
+    },
+    {
+      "feature": "recv_total_before",
+      "label": "Receiver: total received before",
+      "importance": 0.00014884304582760688,
+      "std": 4.927110716032254e-05
+    },
+    {
+      "feature": "log_amount",
+      "label": "Amount (log scale)",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "is_round_amount",
+      "label": "Round amount",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "is_near_max_amount",
+      "label": "Amount near the 10M maximum",
+      "importance": 0.0,
+      "std": 0.0
+    }
+  ]
+}

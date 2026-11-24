@@ -1,0 +1,31 @@
+{
+  "model": "P",
+  "model_name": "Pre-transaction",
+  "algorithm": "HistGradientBoostingClassifier(class_weight='balanced')",
+  "features": [
+    "is_transfer",
+    "amount",
+    "log_amount",
+    "hour",
+    "is_round_amount",
+    "is_near_max_amount",
+    "recv_count_before",
+    "recv_total_before",
+    "recv_is_new",
+    "recv_hours_since_last",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "amount_to_balance"
+  ],
+  "uses_balances": true,
+  "thresholds": {
+    "review": 0.9817781235482097,
+    "block": 0.994472635939938
+  },
+  "sklearn_version": "1.9.1",
+  "split_steps": {
+    "train_before": 323,
+    "test_from": 377
+  },
+  "selection_reason": "R reached PR-AUC 0.416 on validation, but to catch 85% of fraud only 1.0% of its alerts would be real fraud (117 alerts per 1,000 transactions), which a bank could not handle. P adds the balances a bank already knows before approving a payment."
+}

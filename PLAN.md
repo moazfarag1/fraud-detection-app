@@ -26,25 +26,25 @@ Priority if time runs short: (1) correct model + working app on GitHub, (2) six 
 - Gate: notebook executes, data_facts.json written
 
 ## Phase 4: Notebook 03 - Feature Engineering & Threat Model (Mohamed Rafat)
-- [ ] Threat model
-- [ ] src/features.py: basic, receiver history (strictly earlier steps), pre-balance, post-balance
-- [ ] Leakage worked example
-- [ ] data/processed/features.parquet
+- [x] Threat model
+- [x] src/features.py: basic, receiver history (strictly earlier steps), pre-balance, post-balance
+- [x] Leakage worked example
+- [x] data/processed/features.parquet
 - Gate: notebook executes, leakage example shown, features saved
 
 ## Phase 5: Notebook 04a - Model Training (Mahmoud Ibrahim)
-- [ ] Time-based split, fraud rate per split
-- [ ] Models R, P, L (HistGradientBoosting) + Logistic Regression baseline + isFlaggedFraud rule
-- [ ] Thresholds on validation (recall >= 0.85 at Review or Block)
-- [ ] models/model.joblib, models/model_meta.json, reports/validation.json
+- [x] Time-based split, fraud rate per split
+- [x] Models R, P, L (HistGradientBoosting) + Logistic Regression baseline + isFlaggedFraud rule
+- [x] Thresholds on validation (recall >= 0.85 at Review or Block)
+- [x] models/model.joblib, models/model_meta.json, reports/validation.json
 - Gate: notebook executes, model reloads in a fresh process
 
 ## Phase 6: Notebook 04b - Evaluation & Evasion (Mohamed Mahmoud)
-- [ ] Test metrics for all models and baselines, accuracy trap
-- [ ] Permutation importance
-- [ ] Warning signs (src/explain.py)
-- [ ] Evasion test (4 tricks)
-- [ ] reports/metrics.json, feature_importance.json, evasion.json
+- [x] Test metrics for all models and baselines, accuracy trap
+- [x] Permutation importance
+- [x] Warning signs (src/explain.py)
+- [x] Evasion test (4 tricks)
+- [x] reports/metrics.json, feature_importance.json, evasion.json
 - Gate: notebook executes, JSON written, numbers sensible
 
 ## Phase 7: App + Notebook 05 - Deployment (Ali Mahmoud)

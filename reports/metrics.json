@@ -1,0 +1,129 @@
+{
+  "test_rows": 416297,
+  "test_fraud": 4020,
+  "test_fraud_rate_pct": 0.965656730651434,
+  "test_steps": "377-743",
+  "accuracy_trap": {
+    "never_fraud_accuracy": 0.9903434326934857,
+    "never_fraud_recall": 0.0
+  },
+  "primary": {
+    "model": "P",
+    "model_name": "Pre-transaction",
+    "thresholds": {
+      "review": 0.9817781235482097,
+      "block": 0.994472635939938
+    },
+    "roc_auc": 0.9998017161142334,
+    "pr_auc": 0.9789733186117161,
+    "review_or_block": {
+      "precision": 0.8777700023326336,
+      "recall": 0.9360696517412935,
+      "f1": 0.905982905982906,
+      "accuracy": 0.998123935555625,
+      "alerts_per_1000": 10.297936329111186,
+      "confusion": {
+        "tn": 411753,
+        "fp": 524,
+        "fn": 257,
+        "tp": 3763
+      }
+    },
+    "block": {
+      "precision": 0.9806818181818182,
+      "recall": 0.8587064676616916,
+      "f1": 0.9156498673740053,
+      "accuracy": 0.9984722445753873,
+      "alerts_per_1000": 8.455501721126984,
+      "confusion": {
+        "tn": 412209,
+        "fp": 68,
+        "fn": 568,
+        "tp": 3452
+      }
+    },
+    "verdict_counts": {
+      "Normal": {
+        "Approve": 411753,
+        "Review": 456,
+        "Block": 68
+      },
+      "Fraud": {
+        "Approve": 257,
+        "Review": 311,
+        "Block": 3452
+      }
+    }
+  },
+  "comparison": [
+    {
+      "model": "isFlaggedFraud rule",
+      "label": "Simulator rule",
+      "precision": 1.0,
+      "recall": 0.003233830845771144,
+      "f1": 0.006446813786263328,
+      "roc_auc": null,
+      "pr_auc": null,
+      "alerts_per_1000": 0.031227705220071247,
+      "accuracy": 0.9903746603987057
+    },
+    {
+      "model": "LogReg (R features)",
+      "label": "Logistic Regression baseline",
+      "precision": 0.020080022133781683,
+      "recall": 0.9388059701492537,
+      "f1": 0.03931905317552926,
+      "roc_auc": 0.8883963994187988,
+      "pr_auc": 0.16475904993565593,
+      "alerts_per_1000": 451.47574928476547,
+      "accuracy": 0.5569989694857277
+    },
+    {
+      "model": "R",
+      "label": "R: Realistic (no balances)",
+      "precision": 0.05550111219997822,
+      "recall": 0.8875621890547264,
+      "f1": 0.10446952728124496,
+      "roc_auc": 0.9433740929530341,
+      "pr_auc": 0.5607271093666959,
+      "alerts_per_1000": 154.42580657559387,
+      "accuracy": 0.8530592341525401
+    },
+    {
+      "model": "P",
+      "label": "P: Pre-transaction balances",
+      "precision": 0.9717451523545706,
+      "recall": 0.872636815920398,
+      "f1": 0.9195281782437745,
+      "roc_auc": 0.9998017161142334,
+      "pr_auc": 0.9789733186117161,
+      "alerts_per_1000": 8.671693526496709,
+      "accuracy": 0.9985250914611443
+    },
+    {
+      "model": "L",
+      "label": "L: Leaky (uses leaked information, not real)",
+      "precision": 1.0,
+      "recall": 0.9731343283582089,
+      "f1": 0.9863842662632375,
+      "roc_auc": 0.9999833810352857,
+      "pr_auc": 0.9997828184606459,
+      "alerts_per_1000": 9.39713714007067,
+      "accuracy": 0.9997405698335563
+    }
+  ],
+  "random_split_check": {
+    "R": {
+      "test_pr_auc": 0.4492283696478992,
+      "test_precision_at_val_85_recall": 0.04382934443288242,
+      "test_recall": 0.8547077922077922,
+      "test_alerts_per_1000": 57.81327455349623
+    },
+    "P": {
+      "test_pr_auc": 0.9487101631415431,
+      "test_precision_at_val_85_recall": 0.9084687767322498,
+      "test_recall": 0.862012987012987,
+      "test_alerts_per_1000": 2.813057979314759
+    }
+  }
+}

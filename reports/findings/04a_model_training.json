@@ -1,0 +1,11 @@
+{
+  "notebook": "04a_model_training",
+  "findings": [
+    "Time-based split: train steps 1-322, validation 323-376, test 377-743; the test period has a higher fraud rate (0.97%) because normal traffic thins out late in the month.",
+    "Validation PR-AUC: R 0.416, P 0.913, L 1.000, Logistic Regression 0.013.",
+    "Primary model: P. R alone would need 117 alerts per 1,000 transactions to catch 85% of fraud, with only 1.0% of alerts being real.",
+    "Thresholds from validation: Review from a score of 0.9818, Block from 0.9945; on validation this catches 95.2% of fraud at Review or Block (49.6% precision, 2.6 alerts per 1,000) and blocks 84.1% with 90.1% precision.",
+    "The stratified random split gives the same picture: test PR-AUC R 0.449, P 0.949.",
+    "The saved model is 0.10 MB and reloads correctly in a fresh process."
+  ]
+}

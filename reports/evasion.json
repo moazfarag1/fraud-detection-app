@@ -1,0 +1,62 @@
+{
+  "n_frauds": 100,
+  "selection": "random fraud rows from the test period that the model catches (Review or Block)",
+  "typical_receiver": {
+    "count": 6.0,
+    "total": 1283093.145,
+    "hours": 50.0
+  },
+  "tricks": {
+    "split_amount": {
+      "description": "Split the amount into 3 to 5 smaller transfers",
+      "pct_approved": 91.0,
+      "pct_some_pieces_approved": 91.0
+    },
+    "receiver_with_history": {
+      "description": "Use a receiver account with normal history instead of a new one",
+      "pct_approved": 30.0
+    },
+    "daytime_hour": {
+      "description": "Move the transfer to a daytime hour (14:00)",
+      "pct_approved": 6.0
+    },
+    "round_amount": {
+      "description": "Use a round, normal-looking amount (rounded down to 1,000)",
+      "pct_approved": 3.0
+    }
+  },
+  "warning_sign_frequency_pct": {
+    "The transaction empties the whole balance of the sender.": {
+      "fraud": 97.16417910447761,
+      "normal": 0.13999999999999999
+    },
+    "Money goes to a brand-new receiver account (no earlier incoming transfers).": {
+      "fraud": 63.35820895522388,
+      "normal": 14.725
+    },
+    "Receiver account shows a zero balance before the transfer.": {
+      "fraud": 50.0,
+      "normal": 2.335
+    },
+    "Very large amount (1,000,000 or more).": {
+      "fraud": 29.253731343283583,
+      "normal": 4.63
+    },
+    "Unusual hour (night, 00:00 to 05:59).": {
+      "fraud": 25.72139303482587,
+      "normal": 1.355
+    },
+    "Amount is at the 10,000,000 maximum that large frauds are split into.": {
+      "fraud": 4.850746268656716,
+      "normal": 0.01
+    },
+    "Receiver got many transfers before (possible collection or mule account).": {
+      "fraud": 3.45771144278607,
+      "normal": 11.055
+    },
+    "Receiver got another transfer in the last few hours.": {
+      "fraud": 0.8706467661691543,
+      "normal": 11.59
+    }
+  }
+}

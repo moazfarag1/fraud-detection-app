@@ -1,0 +1,10 @@
+{
+  "notebook": "04b_evaluation_and_evasion",
+  "findings": [
+    "The accuracy trap: always answering \"not fraud\" scores 99.03% accuracy on the test period and catches no fraud at all.",
+    "Primary model P on the test period: catches 93.6% of fraud at Review or Block with 87.8% precision and 10.30 alerts per 1,000 transactions (PR-AUC 0.979).",
+    "Test PR-AUC by model: R 0.561, P 0.979, L 1.000 (leaky, not real), Logistic Regression 0.165; the isFlaggedFraud rule catches 0.32% of fraud.",
+    "Top signals for model P: amount / sender balance, amount, receiver balance before.",
+    "Evasion: splitting the amount lets 91% of caught frauds through; a receiver with history 30%; a daytime hour 6%; a round amount 3%."
+  ]
+}

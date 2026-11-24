@@ -22,6 +22,25 @@ def load_model(models_dir: Path = MODELS):
     return joblib.load(models_dir / "model.joblib")
 
 
+REVIEW_POINTS = 50.0
+BLOCK_POINTS = 80.0
+
+
+def risk_points(score, t1: float, t2: float):
+    """Map the model score (0..1) to easy-to-read risk points (0..100).
+
+    The mapping is monotonic and piecewise linear: score t1 (the Review line) becomes 50 points and
+    score t2 (the Block line) becomes 80 points. Verdicts are identical whether you use the score or the points.
+    """
+    s = np.clip(np.asarray(score, dtype=float), 0.0, 1.0)
+    pts = np.where(
+        s < t1, REVIEW_POINTS * s / t1,
+        np.where(s < t2,
+                 REVIEW_POINTS + (BLOCK_POINTS - REVIEW_POINTS) * (s - t1) / (t2 - t1),
+                 BLOCK_POINTS + (100.0 - BLOCK_POINTS) * (s - t2) / max(1.0 - t2, 1e-12)))
+    return pts
+
+
 def verdict(score: float, t1: float, t2: float) -> str:
     if score >= t2:
         return "Block"
@@ -39,5 +58,6 @@ def score_frame(model, meta: dict, feats: pd.DataFrame, types: pd.Series) -> pd.
         risk[scored] = model.predict_proba(feats.loc[scored, meta["features"]])[:, 1]
     out = pd.DataFrame(index=feats.index)
     out["risk_score"] = risk
+    out["risk_points"] = np.where(scored, risk_points(np.nan_to_num(risk), t1, t2), np.nan)
     out["verdict"] = [verdict(r, t1, t2) if s else NOT_SCORED for r, s in zip(risk, scored)]
     return out
