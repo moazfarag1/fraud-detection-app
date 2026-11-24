@@ -245,7 +245,8 @@ barely helps. A real system should also look at several transactions of the same
     d.add("The application", f"""
 <p><i>Notebook 05, owner: {owner['05']}.</i> The web app is a single Streamlit file (<code>app.py</code>) that reuses
 <code>src/</code>. It reads only files in the repository and makes no network calls. It is deployed on Streamlit
-Community Cloud from a private GitHub repository.</p>
+Community Cloud from the project's GitHub repository.</p>
+{f'<div class="box"><b>Live app:</b> {cfg["app_url"]}</div>' if cfg.get("app_url") else ""}
 <ul>
 <li><b>Check a transaction:</b> enter a transaction or click one of six synthetic examples; the app shows Approve,
 Review or Block in color and text, a risk gauge, and the warning signs.</li>

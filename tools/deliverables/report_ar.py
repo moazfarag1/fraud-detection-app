@@ -235,7 +235,8 @@ validation ده بيمسك {b(n['val_rb_recall_pct'])} من الاحتيال (م
     d.add("التطبيق", f"""
 <p><i>Notebook 05، المسؤول: {b(owner['05'])}.</i> تطبيق الويب ملف {b("Streamlit")} واحد ({b("app.py")}) بيستخدم
 {b("src/")}. بيقرا ملفات من الريبو بس، ومابيعملش أي اتصال بالنت. ومرفوع على {b("Streamlit Community Cloud")} من
-ريبو {b("GitHub")} خاص.</p>
+ريبو المشروع على {b("GitHub")}.</p>
+{f'<div class="box"><b>لينك التطبيق:</b> {b(cfg["app_url"])}</div>' if cfg.get("app_url") else ""}
 <ul>
 <li><b>{b("Check a transaction")}:</b> تدخّل عملية أو تدوس على مثال من 6 أمثلة مصطنعة؛ التطبيق بيعرض
 {b("Approve")} أو {b("Review")} أو {b("Block")} باللون والكلام، ومؤشر للخطر، وعلامات التحذير.</li>

@@ -227,6 +227,9 @@ def build(cfg: dict, n: dict) -> Path:
         "Dashboard with honest results",
         "Warning signs in plain English",
     ], size=20, bullets=True, spacing=16)
+    if cfg.get("app_url"):
+        _text(s, 8.7, 5.4, 4.0, 1.2, ["Try it live:", cfg["app_url"].replace("https://", "").rstrip("/")],
+              size=18, color=NAVY, bold=True, spacing=2)
 
     # 10. Limits, next steps, team --------------------------------------------------------------------
     s = _frame(prs, cfg, 10, "Limits, next steps and team",

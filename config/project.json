@@ -6,7 +6,7 @@
   "faculty": "Faculty of Computers and Artificial Intelligence",
   "department": "Computer Science (AI & Data Science track)",
   "date": "2026-11-24",
-  "app_url": "",
+  "app_url": "https://transaction-fraud-detector-sohag.streamlit.app/",
   "team": [
     {"name": "Moaz Farag", "role": "Data Collection & Cleaning, project coordination", "notebook": "notebooks/01_data_cleaning.ipynb", "slides": [1, 2, 4]},
     {"name": "Mohamed Mohy", "role": "Exploratory Data Analysis (EDA)", "notebook": "notebooks/02_eda.ipynb", "slides": [5]},

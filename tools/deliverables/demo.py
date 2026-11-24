@@ -126,7 +126,7 @@ def build(cfg: dict, n: dict) -> None:
         "",
         "**أسئلة متوقعة:**",
         "- *التطبيق بيبعت الداتا لأي سيرفر؟* لأ، بيقرا ملفات الريبو بس ومافيهوش أي اتصال بالنت وقت التشغيل.",
-        "- *إزاي اترفع؟* من ريبو GitHub خاص على Streamlit Community Cloud، و requirements.txt فيه نفس نسخة scikit-learn اللي اتدرب بيها الموديل.",
+        "- *إزاي اترفع؟* من ريبو GitHub على Streamlit Community Cloud، و requirements.txt فيه نفس نسخة scikit-learn اللي اتدرب بيها الموديل.",
         "",
     ]
     OUT.write_text("\n".join(parts), encoding="utf-8")

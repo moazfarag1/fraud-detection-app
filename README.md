@@ -6,6 +6,8 @@ A machine-learning system that flags suspicious money transfers (TRANSFER and CA
 evaluated honestly on data it never saw, explained in plain English, tested against simple attacker tricks, and
 deployed as a Streamlit web app.
 
+Live app: https://transaction-fraud-detector-sohag.streamlit.app/
+
 ## Results in one minute
 
 | | |
